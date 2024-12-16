@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6ccff;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .payment-container {
+            background: rgb(157, 96, 233);
+            background: linear-gradient(90deg, rgb(176, 111, 255) 24%, rgba(220,69,252,1) 100%);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .payment-form {
+            margin-bottom: 20px;
+           
+        }
+
+        .payment-form label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .payment-form input,
+        .payment-form select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .payment-form button {
+            background-color: #4c77a5;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .payment-form button:hover {
+            background-color: #88dced;
+        }
+
+        .cancel-payment {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cancel-payment button {
+            background-color: #f99742;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cancel-payment button:hover {
+            background-color: #c82333;
+        }
+
+        .qr-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .qr-code {
+            margin-top: 20px;
+        }
+
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .pin-section {
+            margin-top: 20px;
+        }
+
+        .pin-section label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .pin-section input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #8e36e0;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #835bac;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #6d2bb1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-container">
+        <h2>Payment Form</h2>
+
+        <div class="payment-form">
+            <label for="creditCard">Card Number:</label>
+            <input type="text" id="creditCard" placeholder="Enter card number">
+
+            <label for="expiration">Expiration:</label>
+            <select id="expiration">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="April">may</option>
+                <option value="April">june</option>
+                <option value="April">august</option>
+                <option value="April">september</option>
+                <option value="April">october</option>
+                <option value="April">november</option>
+                <option value="April">december</option>
+                <!-- Add more months here -->
+            </select>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="CVC/CW">
+
+            <div class="pin-section">
+                <label for="pin">Enter Card PIN:</label>
+                <input type="password" id="pin" placeholder="Enter your PIN" maxlength="4">
+            </div>
+
+            <button>Pay Now</button>
+        </div>
+
+        <div class="cancel-payment">
+            <button>Cancel Payment</button>
+        </div>
+
+        <div class="qr-section">
+            <h3>Scan QR Code for Payment</h3>
+            <div class="qr-code">
+                <img src="frame.png" alt="QR Code">
+                <p>Scan the QR code to complete payment</p>
+            </div>
+        </div>
+    </div><br><br>
+    <center>
+        <a href="index.html">Home</a>
+    </center>
+    <footer>
+        © 2024 Southern Tourism | Trusted by Thousands
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #8e36e0, #6d2bb1);
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Content Section */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Button */
+.btn-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn {
+    text-decoration: none;
+    background: #8e36e0;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #6d2bb1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    background: #eee;
+    color: #555;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    .hero {
+        height: 180px;
+    }
+
+    .hero-text h2 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,180 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f3e5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Card Layout */
+@media (max-width: 768px) {
+
+    .card {
+        flex-direction: column;   /* ✅ stack vertically */
+        text-align: center;
+    }
+
+    .card.reverse {
+        flex-direction: column;   /* ✅ override reverse also */
+    }
+
+    .card img {
+        width: 100%;              /* full width image */
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Remove any old margin if added */
+.card img {
+    margin: 0;
+}
+.card {
+    display: flex;
+    align-items: center;
+    background: white;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+/* Alternate Layout */
+.card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image */
+.card img {
+    width: 40%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Content */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    color: #6a11cb;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* Button */
+/* Container to hold the a tags side by side with space between them */
+.btn-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Adds space between the two links */
+    margin: 30px 0; /* Adds vertical margin for spacing */
+}
+
+/* Styling both the a tags like buttons */
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px; /* Optional: For rounded corners */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn:focus {
+    outline: none; /* Remove focus outline if needed */
+}
+
+.btn {
+    text-decoration: none;
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #388e3c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #eee;
+    font-size: 13px;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card.reverse {
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .card-content {
+        text-align: center;
+    }
+}

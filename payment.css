@@ -1,0 +1,189 @@
+/* ---------- BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fdf6ee; /* same as your home page */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #2c1a0e;
+}
+
+/* ---------- CONTAINER ---------- */
+.payment-container {
+    background: #ffffff;
+    max-width: 500px;
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px 24px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(44,26,14,0.15);
+    border: 1px solid #e8ddd3;
+}
+
+/* ---------- TITLE ---------- */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c1a0e;
+}
+
+/* ---------- FORM ---------- */
+.payment-form label {
+    font-size: 13px;
+    margin-top: 10px;
+    display: block;
+    color: #7a6555;
+}
+
+.payment-form input,
+.payment-form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1.5px solid #e8ddd3;
+    font-size: 14px;
+    background: #fdf6ee;
+}
+
+/* Focus effect */
+.payment-form input:focus,
+.payment-form select:focus {
+    outline: none;
+    border-color: #c0622a;
+    box-shadow: 0 0 0 3px rgba(192,98,42,0.15);
+}
+
+/* Row layout */
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+.col {
+    flex: 1;
+}
+
+/* ---------- BUTTONS ---------- */
+.pay-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    background: #c0622a;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pay-btn:hover {
+    background: #a0511f;
+    transform: translateY(-2px);
+}
+
+.cancel-btn {
+    margin-top: 12px;
+    width: 100%;
+    padding: 12px;
+    background: #e8a96a;
+    border: none;
+    border-radius: 30px;
+    color: #2c1a0e;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cancel-btn:hover {
+    background: #d98c4d;
+}
+
+/* ---------- QR SECTION ---------- */
+.qr-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.qr-section h3 {
+    color: #2c1a0e;
+}
+
+.qr-section img {
+    width: 140px;
+    height: 140px;
+    margin: 12px 0;
+    border-radius: 10px;
+    background: #fff;
+    padding: 8px;
+    border: 1px solid #e8ddd3;
+}
+
+/* ---------- LINKS ---------- */
+.bottom-links {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bottom-links a {
+    text-decoration: none;
+    background: #c0622a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.bottom-links a:hover {
+    background: #a0511f;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #7a6555;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .payment-container {
+        padding: 24px 18px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .payment-container {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .pay-btn,
+    .cancel-btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .qr-section img {
+        width: 110px;
+        height: 110px;
+    }
+}

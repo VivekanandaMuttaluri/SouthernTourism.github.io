@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Southern Tourism</title>
     <link rel="stylesheet" href="home.css">
-    <link rel="icon" href="images/logo.png">
+      <link rel="icon" href="images/icon.webp">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,7 +25,6 @@
             <a href="payment.html">Payment</a>
             <a href="information.html">Information</a>
             <a href="#footer">Help</a>
-            <a href="https://vivekanandamuttaluri.github.io/MyPortfolio/"> Go to Portfolio</a>
         </nav>
     </header>
 
@@ -120,7 +120,7 @@
                 <h2>Travel Details Form</h2>
                 <p>Fill in your details and we'll craft the perfect itinerary for you.</p>
             </div>
-            <form id="travel-form">
+            <form action="/submit-travel-details" method="post">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -161,7 +161,8 @@
                     <label for="specifications">Additional Preferences</label>
                     <textarea id="specifications" name="specifications" rows="4" placeholder="Any specific requirements, dietary needs, accessibility requirements..."></textarea>
                 </div>
-<button type="submit" class="submit-btn" id="submitBtn">Submit Details →</button>            </form>
+                <button type="submit" class="submit-btn">Submit Details →</button>
+            </form>
         </div>
     </section>
 
@@ -174,7 +175,7 @@
             </div>
             <div class="footer-contact">
                 <h4>Get in Touch</h4>
-                <p>📧 vivekanandamuttaluri@gmail.com</p>
+                <p>📧 vivekmuttaluri.com</p>
                 <p>📞 +91 8374802440</p>
             </div>
             <div class="footer-social">
@@ -184,7 +185,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Southern Tourism. All rights reserved.</p>
+            <p>© 2025 Southern Tourism. All rights reserved.</p>
         </div>
     </footer>
 
@@ -193,51 +194,5 @@
         const nav = document.getElementById('main-nav');
         toggle.addEventListener('click', () => nav.classList.toggle('open'));
     </script>
-
-<script>
-const scriptURL = "https://script.google.com/macros/s/AKfycbwjzW5k9QRhTQiJOprKPhQ7PXUSTUKKlUnk_krkGVzp_C7vSjHr5mw_819zQ7ZSVPXo/exec";
-
-const form = document.getElementById("travel-form");
-const btn = document.getElementById("submitBtn");
-
-form.addEventListener("submit", function(e){
-    e.preventDefault();
-
-    // 🔄 Change button while submitting
-    btn.innerText = "Submitting...";
-    btn.disabled = true;
-
-    const data = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        members: document.getElementById("members").value,
-        days: document.getElementById("days").value,
-        month: document.getElementById("month").value,
-        specifications: document.getElementById("specifications").value
-    };
-
-    fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(data)
-    })
-    .then(res => {
-        alert("✅ Details submitted successfully!");
-        form.reset();
-
-        // 🔁 Reset button
-        btn.innerText = "Submit Details →";
-        btn.disabled = false;
-    })
-    .catch(err => {
-        alert("❌ Error! Please try again.");
-
-        // 🔁 Reset button on error too
-        btn.innerText = "Submit Details →";
-        btn.disabled = false;
-    });
-});
-</script>
-    
 </body>
 </html>
